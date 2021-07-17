@@ -1,0 +1,92 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+	background-image: url(t1.jpg);
+	background-repeat:no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	background-size: cover;
+
+
+}
+
+
+
+li{
+	width: 150px;
+	text-align: center;
+	font-family: 'Reggae One', cursive;
+}
+
+.menu1{
+	margin: 0;
+	padding: 0;	
+}
+.menu1 ul,
+.menu1 ol{
+	list-style: none;
+}
+.menu1 > ul {
+	display: flex;
+	justify-content: center;
+
+}
+.menu1 > ul li a{
+	display: block;
+	background/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0d5a4+0,e6a638+50,d99725+51,f0b144+100 */
+background: rgb(240,213,164); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(240,213,164,1) 0%, rgba(230,166,56,1) 50%, rgba(217,151,37,1) 51%, rgba(240,177,68,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(240,213,164,1) 0%,rgba(230,166,56,1) 50%,rgba(217,151,37,1) 51%,rgba(240,177,68,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(240,213,164,1) 0%,rgba(230,166,56,1) 50%,rgba(217,151,37,1) 51%,rgba(240,177,68,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0d5a4', endColorstr='#f0b144',GradientType=0 ); /* IE6-9 */
+
+	padding: 10px 15px;
+	font-size: 20px;
+	text-decoration: none;
+	color: black;
+	transition: all 0.3s ease;
+}
+
+
+.menu1 li a:hover{
+	background: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8c3310+50,752201+53,bf6e4e+100 */
+background: rgb(140,51,16); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(140,51,16,1) 50%, rgba(117,34,1,1) 53%, rgba(191,110,78,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(140,51,16,1) 50%,rgba(117,34,1,1) 53%,rgba(191,110,78,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(140,51,16,1) 50%,rgba(117,34,1,1) 53%,rgba(191,110,78,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c3310', endColorstr='#bf6e4e',GradientType=0 ); /* IE6-9 */
+;
+	color: white;
+	box-shadow: 2px 5px 10px -5px black;
+	transition: all 0.3s ease;
+}
+/*Sub menu*/
+
+.menu1 li ul{
+	position: absolute;
+	min-width: 150px;
+	display: none;
+	 padding: 0px 0px;  
+	}
+
+
+
+.menu1 li> ul li a{
+	text-transform: none;
+}
+.menu1 li:hover > ul{
+	display: block;
+}
+
+
+/*!!!!!!!Media!!!!!!!!!*/
+
+
+
+
+
+
+
+
