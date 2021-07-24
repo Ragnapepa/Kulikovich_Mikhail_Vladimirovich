@@ -6,11 +6,13 @@
 	<title>Document</title>
 	<style>
 	  form{
-	  	width: 300px;
+	  	width: 400px;
 	  	
 	 
 	  }
-		
+		.error{
+			color: red;
+		}
 	</style>
 </head>
 <body>
@@ -24,9 +26,11 @@
 						<legend>Форма проверки паролей</legend>
 						<label>
 							
-							<input type="password" name="pass1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><sup>*</sup>Пароль
+							<input type="password" id="pas1" name="pass1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><sup>*</sup>Пароль
+							<input type="password" id="pas2" name="pass2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><sup>*</sup>Подтвердите Пароль
+							<div class="error"></div>
 							
-							<br><input type="submit" name="sub2" value="Отправить">
+							<br><input type="submit" name="sub2" id="submit" value="Отправить">
 						</label>
 						
 					</fieldset>
@@ -45,9 +49,28 @@
 	$(document).ready(function(){
 
 	$('input[type=password]').css({'color':"red"});
-	$('input[type=submit]').on('click',function(){
-			alert('test');
+	$('input[type=submit]').change(function(){
+			var value = $(this).val()
+			$('input'[type=submit])
 			});
+	$("#pas2").on("keyup", function() { // Выполняем скрипт при изменении содержимого 2-го поля
+	
+		var value_input1 = $("#pas1").val(); // Получаем содержимое 1-го поля
+		var value_input2 = $(this).val(); // Получаем содержимое 2-го поля
+		
+		if(value_input1 != value_input2) { // Условие, если поля не совпадают
+		
+			$(".error").html("Пароли не совпадают!"); // Выводим сообщение
+			$("#submit").attr("disabled", "disabled"); // Запрещаем отправку формы
+			
+		} else { // Условие, если поля совпадают
+		
+			$("#submit").removeAttr("disabled");  // Разрешаем отправку формы
+			$(".error").html(""); // Скрываем сообщение
+			
+		}
+		
+	});
 
 
 
