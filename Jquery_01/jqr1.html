@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	  form{
+	  	width: 300px;
+	  	
+	 
+	  }
+		
+	</style>
+</head>
+<body>
+	
+<div id="t1">
+</div>
+
+<form id="form1">
+			
+					<fieldset>
+						<legend>Форма проверки паролей</legend>
+						<label>
+							
+							<input type="password" name="pass1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><sup>*</sup>Пароль
+							
+							<br><input type="submit" name="sub2" value="Отправить">
+						</label>
+						
+					</fieldset>
+				
+				</form>
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+<script>
+	$(document).ready(function() {
+
+	$('input[type=password]').focus(function () {
+		$(this).css({'border', '3px solid red'});
+
+		.blur(function) () {
+			$(this).css({'border', '3px solid green'});
+
+		})
+
+	});
+</script>
+
+
+
+</body>
+</html>
