@@ -42,15 +42,16 @@
   crossorigin="anonymous"></script>
 
 <script>
-	$(document).ready(function() {
+	$(document).ready(function(){
 
-	$('input[type=password]').focus(function () {
-		$(this).css({'border', '3px solid red'});
+	$('input[type=password]').css({'color':"red"});
+	$('input[type=submit]').on('click',function(){
+			alert('test');
+			});
 
-		.blur(function) () {
-			$(this).css({'border', '3px solid green'});
 
-		})
+
+			
 
 	});
 </script>
